@@ -1,2 +1,7 @@
-# ppads-grupo4
-Repositório para a disciplina de Práticas Profissionais em Análise e Desenvolvimento de Sistemas
+# PPADS Grupo 4
+
+A new Flutter project.
+
+## Getting Started
+
+FlutterFlow projects are built to run on the Flutter _stable_ release.
