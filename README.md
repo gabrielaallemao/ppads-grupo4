@@ -27,7 +27,7 @@ O AirControl oferece ferramentas para você entender e controlar o consumo de en
 1. Programe manutenções preventivas para seus aparelhos.
 2. Receba lembretes das próximas manutenções.
 3. Mantenha seus aparelhos funcionando de forma eficiente e prolongue sua vida útil.
-## Como Acessar:
+## 👨‍💻 Resumo Guia do Usuário:
 ### Acesso ao Sistema:
 1. Acesse via navegador (celular, tablet ou computador).
 2. URL: https://ppads-grupo4.flutterflow.app
@@ -37,6 +37,18 @@ O AirControl oferece ferramentas para você entender e controlar o consumo de en
 2. Preencha: nome completo, e-mail, senha e confirmação.
 3. Confirme via e-mail.
 4. Faça login com suas credenciais.
+### Tela Inicial – Meus Dispositivos:
+1. Adicione dispositivos pelo botão +.
+2. Preencha: quantidade, BTUs, potência (Watts), uso diário (horas) e dias por mês.
+3. O consumo em kWh será calculado automaticamente.
+4. É possível editar/excluir dispositivos.
+### Menu Lateral
+1. Acesse clicando nos três traços no canto superior esquerdo.
+2. Opções disponíveis:
+    *
+
+
+   
 
 
 
