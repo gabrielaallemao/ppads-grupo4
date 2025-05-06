@@ -45,8 +45,8 @@ O AirControl oferece ferramentas para você entender e controlar o consumo de en
 ### Menu Lateral
 1. Acesse clicando nos três traços no canto superior esquerdo.
 2. Opções disponíveis:
-    * __Cálculo de BTUs__
-    * __Meus lembretes (manutenções)__
+    * Cálculo de BTUs
+    * Meus lembretes (manutenções)
     * Sobre o app
 
    
