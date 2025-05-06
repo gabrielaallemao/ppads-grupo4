@@ -27,42 +27,8 @@ O AirControl oferece ferramentas para você entender e controlar o consumo de en
 1. Programe manutenções preventivas para seus aparelhos.
 2. Receba lembretes das próximas manutenções.
 3. Mantenha seus aparelhos funcionando de forma eficiente e prolongue sua vida útil.
-### Resumo Guia do usuário:
-Acesso ao Sistema
-•	Acesse via navegador (celular, tablet ou computador).
-•	URL: https://ppads-grupo4.flutterflow.app
-•	Não é necessário instalar o app.
- Criar uma Conta
-•	Clique em “Criar Conta”.
-•	Preencha: nome completo, e-mail, senha e confirmação.
-•	Confirme via e-mail.
-•	Faça login com suas credenciais.
-Tela Inicial – Meus Dispositivos
-•	Adicione dispositivos pelo botão +.
-•	Preencha: quantidade, BTUs, potência (Watts), uso diário (horas) e dias por mês.
-•	O consumo em kWh será calculado automaticamente.
-•	É possível editar/excluir dispositivos.
-Menu Lateral
-•	Acesse clicando nos três traços no canto superior esquerdo.
-•	Opções disponíveis:
-o	Cálculo de BTUs
-o	Meus lembretes (manutenções)
-o	Sobre o app
-o	Logout
-Cálculo de BTUs
-•	Preencha: área do cômodo, nº de pessoas e nº de janelas.
-•	Clique em “Calcular” para obter o modelo ideal de ar-condicionado.
-Manutenções
-•	Acesse "Meus lembretes" no menu.
-•	Clique em + para adicionar uma nova manutenção.
-•	Informe: tipo, dispositivo, local e data.
-•	Marque como “Concluído” após realização.
-•	Editar/excluir manutenções também é possível.
-Sobre o App
-•	Informações e explicações sobre o funcionamento e os cálculos estão disponíveis na opção "Sobre o app" no menu lateral.
-Conclusão
-•	O app visa facilitar o controle de ar-condicionados com foco em economia e sustentabilidade.
-•	Recomenda-se manter dados atualizados, realizar cálculos periodicamente e seguir alertas de manutenção.
+### Como Acessar:
+
 
 ## 🧮 Detalhes Técnicos
 ### Cálculo de kWh
