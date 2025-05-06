@@ -28,6 +28,11 @@ O AirControl oferece ferramentas para você entender e controlar o consumo de en
 2. Receba lembretes das próximas manutenções.
 3. Mantenha seus aparelhos funcionando de forma eficiente e prolongue sua vida útil.
 ### Como Acessar:
+Acesso ao Sistema:
+1. Acesse via navegador (celular, tablet ou computador).
+2. URL: https://ppads-grupo4.flutterflow.app
+3. Não é necessário instalar o app.
+
 
 
 ## 🧮 Detalhes Técnicos
