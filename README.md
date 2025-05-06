@@ -59,10 +59,10 @@ O AirControl oferece ferramentas para você entender e controlar o consumo de en
 4. Marque como “Concluído” após realização.
 5. Editar/excluir manutenções também é possível.
 ### Sobre o App
-1. Informações e explicações sobre o funcionamento e os cálculos estão disponíveis na opção "Sobre o app" no menu lateral.
+ * Informações e explicações sobre o funcionamento e os cálculos estão disponíveis na opção "Sobre o app" no menu lateral.
 ### Conclusão
-1. O app visa facilitar o controle de ar-condicionados com foco em economia e sustentabilidade.
-2. Recomenda-se manter dados atualizados, realizar cálculos periodicamente e seguir alertas de manutenção.
+ * O app visa facilitar o controle de ar-condicionados com foco em economia e sustentabilidade.
+ * Recomenda-se manter dados atualizados, realizar cálculos periodicamente e seguir alertas de manutenção.
 
 
 
