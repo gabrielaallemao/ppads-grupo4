@@ -27,7 +27,7 @@ O AirControl oferece ferramentas para você entender e controlar o consumo de en
 1. Programe manutenções preventivas para seus aparelhos.
 2. Receba lembretes das próximas manutenções.
 3. Mantenha seus aparelhos funcionando de forma eficiente e prolongue sua vida útil.
-## 👨‍💻 Resumo Guia do Usuário:
+## 👨‍💻 Guia do Usuário:
 ### Acesso ao Sistema:
 1. Acesse via navegador (celular, tablet ou computador).
 2. URL: https://ppads-grupo4.flutterflow.app
@@ -48,6 +48,24 @@ O AirControl oferece ferramentas para você entender e controlar o consumo de en
     * Cálculo de BTUs
     * Meus lembretes (manutenções)
     * Sobre o app
+    * Logout
+### Cálculo de BTUs
+1. Preencha: área do cômodo, nº de pessoas e nº de janelas.
+2. Clique em “Calcular” para obter o modelo ideal de ar-condicionado
+### Manutenções
+1. Acesse "Meus lembretes" no menu.
+2. Clique em + para adicionar uma nova manutenção.
+3. Informe: tipo, dispositivo, local e data.
+4. Marque como “Concluído” após realização.
+5. Editar/excluir manutenções também é possível.
+### Sobre o App
+1. Informações e explicações sobre o funcionamento e os cálculos estão disponíveis na opção "Sobre o app" no menu lateral.
+### Conclusão
+1. O app visa facilitar o controle de ar-condicionados com foco em economia e sustentabilidade.
+2. Recomenda-se manter dados atualizados, realizar cálculos periodicamente e seguir alertas de manutenção.
+
+
+
 
    
 
