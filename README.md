@@ -2,16 +2,26 @@
 
     https://ppads-grupo4.flutterflow.app
 
-## 💡 Descrição
+Navegação |
+💡 [Descrição](#descricao) |
+⚡️ [Funcionalidades](#funcionalidades) |
+⚙️ [Como Funciona?](#como-funciona) |
+👨‍💻 [Guia do Usuário](#guia-do-usuario) |
+🧮 [Detalhes Técnicos](#detalhes-tecnicos) |
+🎯 [Público Alvo](#publico-alvo) |
+🚀 [Próximos Passos](#proximos-passos) |
+✏️ [Autores](#autores) |
+
+## 💡 <a name="descricao"></a> Descrição
 O aplicativo AirControl é uma solução tecnológica desenvolvida para otimizar o uso de aparelhos de ar-condicionado, visando a redução do consumo de energia elétrica e a promoção de práticas mais sustentáveis. Com o AirControl, você pode calcular o consumo de energia do seu aparelho, verificar se o modelo é adequado para o seu ambiente e gerenciar seus dispositivos e manutenções de forma eficiente.
 
-## ⚡️ Funcionalidades
+## ⚡️ <a name="funcionalidades"></a> Funcionalidades
    * __Cálculo de kWh:__ Entenda o que é _kWh_ e calcule o consumo de energia do seu aparelho de ar-condicionado com base na potência e no tempo de uso.
    * __Cálculo de BTUs:__ Determine a capacidade de refrigeração ideal para o seu ambiente, considerando fatores como tamanho, exposição solar e número de pessoas.
    * __Meus Dispositivos__: Cadastre e gerencie seus aparelhos de ar-condicionado, acompanhando o consumo de cada um.
    * __Manutenções:__ Programe e acompanhe as manutenções dos seus aparelhos, garantindo o bom funcionamento e a eficiência energética.
 
-## ⚙️ Como Funciona?
+## ⚙️ <a name="como-funciona"></a> Como Funciona?
 O AirControl oferece ferramentas para você entender e controlar o consumo de energia do seu ar-condicionado:
 ### Cálculo de kWh:
 1. Informe a quantidade de aparelhos, potência do seu aparelho (em Watts) e o tempo de uso diário (em horas) e dias de uso no mês.
@@ -27,7 +37,8 @@ O AirControl oferece ferramentas para você entender e controlar o consumo de en
 1. Programe manutenções preventivas para seus aparelhos.
 2. Receba lembretes das próximas manutenções.
 3. Mantenha seus aparelhos funcionando de forma eficiente e prolongue sua vida útil.
-## 👨‍💻 Guia do Usuário:
+
+## 👨‍💻 <a name="guia-do-usuario"></a>Guia do Usuário:
 ### Acesso ao Sistema:
 1. Acesse via navegador (celular, tablet ou computador).
 2. URL: https://ppads-grupo4.flutterflow.app
@@ -64,15 +75,7 @@ O AirControl oferece ferramentas para você entender e controlar o consumo de en
  * O app visa facilitar o controle de ar-condicionados com foco em economia e sustentabilidade.
  * Recomenda-se manter dados atualizados, realizar cálculos periodicamente e seguir alertas de manutenção.
 
-
-
-
-   
-
-
-
-
-## 🧮 Detalhes Técnicos
+## 🧮 <a name="detalhes-tecnicos"></a>Detalhes Técnicos
 ### Cálculo de kWh
 __O que é kWh?__
 
@@ -90,7 +93,7 @@ __O que é BTU?__
     (Número de pessoas no cômodo x 600) +
     (Número de janelas no cômodo x 600)
 
-## 🎯 Público-Alvo
+## 🎯 <a name="publico-alvo"></a> Público-Alvo
 O AirControl é ideal para:
    * Usuários residenciais
    * Empresas e escritórios
@@ -99,12 +102,12 @@ O AirControl é ideal para:
    * Instituições de ensino e hospitais
    * Empresas de manutenção e automação
 
-## 🚀 Próximos Passos
+## 🚀 <a name="proximos-passos"></a>Próximos Passos
    * Desenvolvimento de novas funcionalidades para controle de consumo dos dispositivos.
    * Implementação de gráficos e relatórios de consumo.
    * Criação de um sistema de alertas de consumo.
 
-## 🧑‍💻 Autores  
+## ✏️ <a name="autores"></a>Autores  
 Caio Silva  
 Fernando Alvarenga  
 Gabriela Allemão  
