@@ -3,12 +3,16 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
 import 'meusdispositivos_model.dart';
 export 'meusdispositivos_model.dart';
 
@@ -62,8 +66,8 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
             backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
             body: Center(
               child: SizedBox(
-                width: 50.0,
-                height: 50.0,
+                width: 50,
+                height: 50,
                 child: CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation<Color>(
                     FlutterFlowTheme.of(context).primary,
@@ -85,14 +89,14 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
             drawer: Container(
-              width: 250.0,
+              width: 250,
               child: Drawer(
-                elevation: 16.0,
+                elevation: 16,
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(20.0),
+                      padding: EdgeInsets.all(20),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -102,19 +106,16 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .headlineMediumFamily,
+                                  font: FlutterFlowTheme.of(context)
+                                      .headlineMedium,
                                   letterSpacing: 0.0,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .headlineMediumFamily),
                                 ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(1.0, -1.0),
+                            alignment: AlignmentDirectional(1, -1),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  40.0, 0.0, 0.0, 0.0),
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(40, 0, 0, 0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -127,7 +128,7 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                                   Icons.close_rounded,
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
-                                  size: 40.0,
+                                  size: 40,
                                 ),
                               ),
                             ),
@@ -139,8 +140,7 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 20.0, 0.0, 20.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 20),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -155,20 +155,15 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    font:
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
                                   ),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 20.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -182,20 +177,15 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    font:
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
                                   ),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 20.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -209,20 +199,15 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    font:
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
                                   ),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 20.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -236,20 +221,15 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    font:
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
                                   ),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 20.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -268,15 +248,11 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    font:
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                     color:
                                         FlutterFlowTheme.of(context).tertiary,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
                                   ),
                             ),
                           ),
@@ -285,12 +261,11 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                     ),
                     Spacer(),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                       child: Icon(
                         Icons.energy_savings_leaf_rounded,
                         color: FlutterFlowTheme.of(context).alternate,
-                        size: 24.0,
+                        size: 24,
                       ),
                     ),
                   ],
@@ -302,13 +277,13 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
-                borderRadius: 30.0,
-                borderWidth: 1.0,
-                buttonSize: 60.0,
+                borderRadius: 30,
+                borderWidth: 1,
+                buttonSize: 60,
                 icon: Icon(
                   Icons.menu_rounded,
                   color: Colors.white,
-                  size: 30.0,
+                  size: 30,
                 ),
                 onPressed: () async {
                   scaffoldKey.currentState!.openDrawer();
@@ -317,25 +292,22 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
               title: Text(
                 'Meus dispositivos',
                 style: FlutterFlowTheme.of(context).titleMedium.override(
-                      fontFamily:
-                          FlutterFlowTheme.of(context).titleMediumFamily,
-                      fontSize: 24.0,
+                      font: FlutterFlowTheme.of(context).titleMedium,
+                      fontSize: 24,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
-                      useGoogleFonts: GoogleFonts.asMap().containsKey(
-                          FlutterFlowTheme.of(context).titleMediumFamily),
                     ),
               ),
               actions: [
                 FlutterFlowIconButton(
                   borderColor: Colors.transparent,
-                  borderRadius: 30.0,
-                  borderWidth: 1.0,
-                  buttonSize: 60.0,
+                  borderRadius: 30,
+                  borderWidth: 1,
+                  buttonSize: 60,
                   icon: Icon(
                     Icons.add_rounded,
                     color: Colors.white,
-                    size: 30.0,
+                    size: 30,
                   ),
                   onPressed: () async {
                     context.pushNamed(CadastrardispositivoWidget.routeName);
@@ -343,14 +315,14 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                 ),
               ],
               centerTitle: true,
-              elevation: 2.0,
+              elevation: 2,
             ),
             body: SafeArea(
               top: true,
               child: Stack(
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(30.0),
+                    padding: EdgeInsets.all(30),
                     child: Builder(
                       builder: (context) {
                         final dispositivos =
@@ -360,16 +332,16 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                           padding: EdgeInsets.zero,
                           scrollDirection: Axis.vertical,
                           itemCount: dispositivos.length,
-                          separatorBuilder: (_, __) => SizedBox(height: 10.0),
+                          separatorBuilder: (_, __) => SizedBox(height: 10),
                           itemBuilder: (context, dispositivosIndex) {
                             final dispositivosItem =
                                 dispositivos[dispositivosIndex];
                             return Container(
-                              width: MediaQuery.sizeOf(context).width * 1.0,
-                              height: 150.0,
+                              width: MediaQuery.sizeOf(context).width,
+                              height: 150,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).alternate,
-                                borderRadius: BorderRadius.circular(12.0),
+                                borderRadius: BorderRadius.circular(12),
                               ),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -384,15 +356,10 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .headlineLarge
                                         .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .headlineLargeFamily,
+                                          font: FlutterFlowTheme.of(context)
+                                              .headlineLarge,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .headlineLargeFamily),
                                         ),
                                   ),
                                   Column(
@@ -409,16 +376,9 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMediumFamily,
+                                              font: FlutterFlowTheme.of(context)
+                                                  .bodyMedium,
                                               letterSpacing: 0.0,
-                                              useGoogleFonts: GoogleFonts
-                                                      .asMap()
-                                                  .containsKey(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumFamily),
                                             ),
                                       ),
                                       Text(
@@ -434,16 +394,9 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMediumFamily,
+                                              font: FlutterFlowTheme.of(context)
+                                                  .bodyMedium,
                                               letterSpacing: 0.0,
-                                              useGoogleFonts: GoogleFonts
-                                                      .asMap()
-                                                  .containsKey(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumFamily),
                                             ),
                                       ),
                                       Text(
@@ -463,22 +416,15 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMediumFamily,
+                                              font: FlutterFlowTheme.of(context)
+                                                  .bodyMedium,
                                               letterSpacing: 0.0,
-                                              useGoogleFonts: GoogleFonts
-                                                      .asMap()
-                                                  .containsKey(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumFamily),
                                             ),
                                       ),
                                     ],
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0, 0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -487,7 +433,7 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                                         Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 20.0),
+                                                  0, 0, 0, 20),
                                           child: InkWell(
                                             splashColor: Colors.transparent,
                                             focusColor: Colors.transparent,
@@ -525,7 +471,7 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primaryText,
-                                              size: 24.0,
+                                              size: 24,
                                             ),
                                           ),
                                         ),
@@ -549,7 +495,7 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                                             FontAwesomeIcons.edit,
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryText,
-                                            size: 24.0,
+                                            size: 24,
                                           ),
                                         ),
                                       ],
@@ -564,14 +510,13 @@ class _MeusdispositivosWidgetState extends State<MeusdispositivosWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 1.1),
+                    alignment: AlignmentDirectional(0, 1.1),
                     child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                       child: Icon(
                         Icons.energy_savings_leaf_rounded,
                         color: FlutterFlowTheme.of(context).alternate,
-                        size: 24.0,
+                        size: 24,
                       ),
                     ),
                   ),
