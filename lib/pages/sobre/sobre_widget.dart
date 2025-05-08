@@ -2,10 +2,14 @@ import '/auth/supabase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:ui';
 import '/index.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
 import 'sobre_model.dart';
 export 'sobre_model.dart';
 
@@ -60,14 +64,14 @@ class _SobreWidgetState extends State<SobreWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         drawer: Container(
-          width: 250.0,
+          width: 250,
           child: Drawer(
-            elevation: 16.0,
+            elevation: 16,
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsets.all(20.0),
+                  padding: EdgeInsets.all(20),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -77,19 +81,14 @@ class _SobreWidgetState extends State<SobreWidget> {
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .override(
-                              fontFamily: FlutterFlowTheme.of(context)
-                                  .headlineMediumFamily,
+                              font: FlutterFlowTheme.of(context).headlineMedium,
                               letterSpacing: 0.0,
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context)
-                                      .headlineMediumFamily),
                             ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(1.0, -1.0),
+                        alignment: AlignmentDirectional(1, -1),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              40.0, 0.0, 0.0, 0.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(40, 0, 0, 0),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -101,7 +100,7 @@ class _SobreWidgetState extends State<SobreWidget> {
                             child: Icon(
                               Icons.close_rounded,
                               color: FlutterFlowTheme.of(context).primaryText,
-                              size: 40.0,
+                              size: 40,
                             ),
                           ),
                         ),
@@ -113,8 +112,7 @@ class _SobreWidgetState extends State<SobreWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 20),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -128,19 +126,14 @@ class _SobreWidgetState extends State<SobreWidget> {
                           style: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
+                                font: FlutterFlowTheme.of(context).bodyMedium,
                                 letterSpacing: 0.0,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
                               ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -154,19 +147,14 @@ class _SobreWidgetState extends State<SobreWidget> {
                           style: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
+                                font: FlutterFlowTheme.of(context).bodyMedium,
                                 letterSpacing: 0.0,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
                               ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -180,19 +168,14 @@ class _SobreWidgetState extends State<SobreWidget> {
                           style: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
+                                font: FlutterFlowTheme.of(context).bodyMedium,
                                 letterSpacing: 0.0,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
                               ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -206,19 +189,14 @@ class _SobreWidgetState extends State<SobreWidget> {
                           style: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
+                                font: FlutterFlowTheme.of(context).bodyMedium,
                                 letterSpacing: 0.0,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
                               ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -237,13 +215,9 @@ class _SobreWidgetState extends State<SobreWidget> {
                           style: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
+                                font: FlutterFlowTheme.of(context).bodyMedium,
                                 color: FlutterFlowTheme.of(context).tertiary,
                                 letterSpacing: 0.0,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
                               ),
                         ),
                       ),
@@ -252,11 +226,11 @@ class _SobreWidgetState extends State<SobreWidget> {
                 ),
                 Spacer(),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                   child: Icon(
                     Icons.energy_savings_leaf_rounded,
                     color: FlutterFlowTheme.of(context).alternate,
-                    size: 24.0,
+                    size: 24,
                   ),
                 ),
               ],
@@ -268,13 +242,13 @@ class _SobreWidgetState extends State<SobreWidget> {
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
+            borderRadius: 30,
+            borderWidth: 1,
+            buttonSize: 60,
             icon: Icon(
               Icons.menu_rounded,
               color: Colors.white,
-              size: 30.0,
+              size: 30,
             ),
             onPressed: () async {
               scaffoldKey.currentState!.openDrawer();
@@ -283,32 +257,29 @@ class _SobreWidgetState extends State<SobreWidget> {
           title: Text(
             'Sobre o app',
             style: FlutterFlowTheme.of(context).titleMedium.override(
-                  fontFamily: FlutterFlowTheme.of(context).titleMediumFamily,
-                  fontSize: 24.0,
+                  font: FlutterFlowTheme.of(context).titleMedium,
+                  fontSize: 24,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w600,
-                  useGoogleFonts: GoogleFonts.asMap().containsKey(
-                      FlutterFlowTheme.of(context).titleMediumFamily),
                 ),
           ),
           actions: [],
           centerTitle: true,
-          elevation: 2.0,
+          elevation: 2,
         ),
         body: SafeArea(
           top: true,
           child: Stack(
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(30, 0, 30, 0),
                 child: ListView(
                   padding: EdgeInsets.zero,
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
                   children: [
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.8,
                         color: Color(0x00000000),
@@ -320,14 +291,11 @@ class _SobreWidgetState extends State<SobreWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .titleLarge
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .titleLargeFamily,
-                                    color: Colors.black,
+                                    font:
+                                        FlutterFlowTheme.of(context).titleLarge,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .titleLargeFamily),
                                   ),
                             ),
                             collapsed: Column(
@@ -338,14 +306,11 @@ class _SobreWidgetState extends State<SobreWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
-                                        color: Color(0x8A000000),
+                                        font: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         letterSpacing: 0.0,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily),
                                       ),
                                 ),
                               ],
@@ -358,15 +323,12 @@ class _SobreWidgetState extends State<SobreWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
-                                        color: Color(0x8A000000),
+                                        font: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.normal,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily),
                                       ),
                                 ),
                               ],
@@ -378,14 +340,15 @@ class _SobreWidgetState extends State<SobreWidget> {
                               headerAlignment:
                                   ExpandablePanelHeaderAlignment.center,
                               hasIcon: true,
+                              iconColor:
+                                  FlutterFlowTheme.of(context).primaryText,
                             ),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.8,
                         color: Color(0x00000000),
@@ -397,14 +360,11 @@ class _SobreWidgetState extends State<SobreWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .titleLarge
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .titleLargeFamily,
-                                    color: Colors.black,
+                                    font:
+                                        FlutterFlowTheme.of(context).titleLarge,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .titleLargeFamily),
                                   ),
                             ),
                             collapsed: Column(
@@ -415,14 +375,11 @@ class _SobreWidgetState extends State<SobreWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
-                                        color: Color(0x8A000000),
+                                        font: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         letterSpacing: 0.0,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily),
                                       ),
                                 ),
                               ],
@@ -435,15 +392,12 @@ class _SobreWidgetState extends State<SobreWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
-                                        color: Color(0x8A000000),
+                                        font: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.normal,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily),
                                       ),
                                 ),
                               ],
@@ -455,14 +409,15 @@ class _SobreWidgetState extends State<SobreWidget> {
                               headerAlignment:
                                   ExpandablePanelHeaderAlignment.center,
                               hasIcon: true,
+                              iconColor:
+                                  FlutterFlowTheme.of(context).primaryText,
                             ),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.8,
                         color: Color(0x00000000),
@@ -474,14 +429,11 @@ class _SobreWidgetState extends State<SobreWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .titleLarge
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .titleLargeFamily,
-                                    color: Colors.black,
+                                    font:
+                                        FlutterFlowTheme.of(context).titleLarge,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .titleLargeFamily),
                                   ),
                             ),
                             collapsed: Column(
@@ -492,14 +444,11 @@ class _SobreWidgetState extends State<SobreWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
-                                        color: Color(0x8A000000),
+                                        font: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         letterSpacing: 0.0,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily),
                                       ),
                                 ),
                               ],
@@ -512,15 +461,12 @@ class _SobreWidgetState extends State<SobreWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
-                                        color: Color(0x8A000000),
+                                        font: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.normal,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily),
                                       ),
                                 ),
                               ],
@@ -532,14 +478,15 @@ class _SobreWidgetState extends State<SobreWidget> {
                               headerAlignment:
                                   ExpandablePanelHeaderAlignment.center,
                               hasIcon: true,
+                              iconColor:
+                                  FlutterFlowTheme.of(context).primaryText,
                             ),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.8,
                         color: Color(0x00000000),
@@ -551,14 +498,11 @@ class _SobreWidgetState extends State<SobreWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .titleLarge
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .titleLargeFamily,
-                                    color: Colors.black,
+                                    font:
+                                        FlutterFlowTheme.of(context).titleLarge,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .titleLargeFamily),
                                   ),
                             ),
                             collapsed: Column(
@@ -569,14 +513,11 @@ class _SobreWidgetState extends State<SobreWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
-                                        color: Color(0x8A000000),
+                                        font: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         letterSpacing: 0.0,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily),
                                       ),
                                 ),
                               ],
@@ -589,15 +530,12 @@ class _SobreWidgetState extends State<SobreWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
-                                        color: Color(0x8A000000),
+                                        font: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.normal,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily),
                                       ),
                                 ),
                               ],
@@ -609,14 +547,15 @@ class _SobreWidgetState extends State<SobreWidget> {
                               headerAlignment:
                                   ExpandablePanelHeaderAlignment.center,
                               hasIcon: true,
+                              iconColor:
+                                  FlutterFlowTheme.of(context).primaryText,
                             ),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.8,
                         color: Color(0x00000000),
@@ -624,18 +563,15 @@ class _SobreWidgetState extends State<SobreWidget> {
                           controller: _model.expandableExpandableController5,
                           child: ExpandablePanel(
                             header: Text(
-                              'Mantenções',
+                              'Manutenções',
                               style: FlutterFlowTheme.of(context)
                                   .titleLarge
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .titleLargeFamily,
-                                    color: Colors.black,
+                                    font:
+                                        FlutterFlowTheme.of(context).titleLarge,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .titleLargeFamily),
                                   ),
                             ),
                             collapsed: Column(
@@ -646,14 +582,11 @@ class _SobreWidgetState extends State<SobreWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
-                                        color: Color(0x8A000000),
+                                        font: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         letterSpacing: 0.0,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily),
                                       ),
                                 ),
                               ],
@@ -662,19 +595,16 @@ class _SobreWidgetState extends State<SobreWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Text(
-                                  'A página \"Meus lembretes\" oferece um controle de lembretes de manutenções preventivas que o usuário pode adicionar para ser notificado e otimizar ainda mais o tempo de vida útil de seu aparelho.',
+                                  'A página \"Manutenções\" oferece um controle de lembretes de manutenções preventivas que o usuário pode adicionar para ser notificado e otimizar ainda mais o tempo de vida útil de seu aparelho.',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
-                                        color: Color(0x8A000000),
+                                        font: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.normal,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily),
                                       ),
                                 ),
                               ],
@@ -686,20 +616,21 @@ class _SobreWidgetState extends State<SobreWidget> {
                               headerAlignment:
                                   ExpandablePanelHeaderAlignment.center,
                               hasIcon: true,
+                              iconColor:
+                                  FlutterFlowTheme.of(context).primaryText,
                             ),
                           ),
                         ),
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 1.1),
+                      alignment: AlignmentDirectional(0, 1.1),
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                         child: Icon(
                           Icons.energy_savings_leaf_rounded,
                           color: FlutterFlowTheme.of(context).alternate,
-                          size: 24.0,
+                          size: 24,
                         ),
                       ),
                     ),
