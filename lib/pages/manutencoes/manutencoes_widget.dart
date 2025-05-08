@@ -4,10 +4,14 @@ import '/components/switch_button_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
 import 'manutencoes_model.dart';
 export 'manutencoes_model.dart';
 
@@ -45,7 +49,7 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
   Widget build(BuildContext context) {
     return FutureBuilder<List<LembretesManutencaoRow>>(
       future: LembretesManutencaoTable().queryRows(
-        queryFn: (q) => q.order('created_at').order('concluido'),
+        queryFn: (q) => q.order('created_at'),
       ),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
@@ -54,8 +58,8 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
             backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
             body: Center(
               child: SizedBox(
-                width: 50.0,
-                height: 50.0,
+                width: 50,
+                height: 50,
                 child: CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation<Color>(
                     FlutterFlowTheme.of(context).primary,
@@ -77,14 +81,14 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
             drawer: Container(
-              width: 250.0,
+              width: 250,
               child: Drawer(
-                elevation: 16.0,
+                elevation: 16,
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(20.0),
+                      padding: EdgeInsets.all(20),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -94,19 +98,16 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .headlineMediumFamily,
+                                  font: FlutterFlowTheme.of(context)
+                                      .headlineMedium,
                                   letterSpacing: 0.0,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .headlineMediumFamily),
                                 ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(1.0, -1.0),
+                            alignment: AlignmentDirectional(1, -1),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  40.0, 0.0, 0.0, 0.0),
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(40, 0, 0, 0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -119,7 +120,7 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                                   Icons.close_rounded,
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
-                                  size: 40.0,
+                                  size: 40,
                                 ),
                               ),
                             ),
@@ -131,8 +132,7 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 20.0, 0.0, 20.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 20),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -147,20 +147,15 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    font:
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
                                   ),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 20.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -174,20 +169,15 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    font:
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
                                   ),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 20.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -201,20 +191,15 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    font:
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
                                   ),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 20.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -228,20 +213,15 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    font:
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
                                   ),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 20.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -260,15 +240,11 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    font:
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                     color:
                                         FlutterFlowTheme.of(context).tertiary,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
                                   ),
                             ),
                           ),
@@ -277,12 +253,11 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                     ),
                     Spacer(),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                       child: Icon(
                         Icons.energy_savings_leaf_rounded,
                         color: FlutterFlowTheme.of(context).alternate,
-                        size: 24.0,
+                        size: 24,
                       ),
                     ),
                   ],
@@ -294,13 +269,13 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
-                borderRadius: 30.0,
-                borderWidth: 1.0,
-                buttonSize: 60.0,
+                borderRadius: 30,
+                borderWidth: 1,
+                buttonSize: 60,
                 icon: Icon(
                   Icons.menu_rounded,
                   color: Colors.white,
-                  size: 30.0,
+                  size: 30,
                 ),
                 onPressed: () async {
                   scaffoldKey.currentState!.openDrawer();
@@ -309,25 +284,22 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
               title: Text(
                 'Manutenções',
                 style: FlutterFlowTheme.of(context).titleMedium.override(
-                      fontFamily:
-                          FlutterFlowTheme.of(context).titleMediumFamily,
-                      fontSize: 24.0,
+                      font: FlutterFlowTheme.of(context).titleMedium,
+                      fontSize: 24,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
-                      useGoogleFonts: GoogleFonts.asMap().containsKey(
-                          FlutterFlowTheme.of(context).titleMediumFamily),
                     ),
               ),
               actions: [
                 FlutterFlowIconButton(
                   borderColor: Colors.transparent,
-                  borderRadius: 30.0,
-                  borderWidth: 1.0,
-                  buttonSize: 60.0,
+                  borderRadius: 30,
+                  borderWidth: 1,
+                  buttonSize: 60,
                   icon: Icon(
                     Icons.add_rounded,
                     color: Colors.white,
-                    size: 30.0,
+                    size: 30,
                   ),
                   onPressed: () async {
                     context.pushNamed(CadastrarmanutencoesWidget.routeName);
@@ -335,14 +307,14 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                 ),
               ],
               centerTitle: true,
-              elevation: 2.0,
+              elevation: 2,
             ),
             body: SafeArea(
               top: true,
               child: Stack(
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(30.0),
+                    padding: EdgeInsets.all(30),
                     child: Builder(
                       builder: (context) {
                         final manutencoes =
@@ -352,16 +324,16 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                           padding: EdgeInsets.zero,
                           scrollDirection: Axis.vertical,
                           itemCount: manutencoes.length,
-                          separatorBuilder: (_, __) => SizedBox(height: 10.0),
+                          separatorBuilder: (_, __) => SizedBox(height: 10),
                           itemBuilder: (context, manutencoesIndex) {
                             final manutencoesItem =
                                 manutencoes[manutencoesIndex];
                             return Container(
-                              width: MediaQuery.sizeOf(context).width * 1.0,
-                              height: 80.0,
+                              width: MediaQuery.sizeOf(context).width,
+                              height: 80,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).alternate,
-                                borderRadius: BorderRadius.circular(12.0),
+                                borderRadius: BorderRadius.circular(12),
                               ),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -369,7 +341,7 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                                     MainAxisAlignment.spaceAround,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0, 0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -385,18 +357,12 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily:
+                                                font:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily,
-                                                fontSize: 16.0,
+                                                        .bodyMedium,
+                                                fontSize: 16,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                         Text(
@@ -407,16 +373,10 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily:
+                                                font:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily,
+                                                        .bodyMedium,
                                                 letterSpacing: 0.0,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                         Text(
@@ -428,16 +388,10 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily:
+                                                font:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily,
+                                                        .bodyMedium,
                                                 letterSpacing: 0.0,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                       ],
@@ -449,7 +403,7 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                                     children: [
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 12.0),
+                                            0, 0, 0, 12),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
                                           focusColor: Colors.transparent,
@@ -486,7 +440,7 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                                             FontAwesomeIcons.trashAlt,
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryText,
-                                            size: 20.0,
+                                            size: 20,
                                           ),
                                         ),
                                       ),
@@ -510,7 +464,7 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                                           FontAwesomeIcons.edit,
                                           color: FlutterFlowTheme.of(context)
                                               .primaryText,
-                                          size: 20.0,
+                                          size: 20,
                                         ),
                                       ),
                                     ],
@@ -518,14 +472,16 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                                   Flexible(
                                     child: wrapWithModel(
                                       model: _model.switchButtonModels.getModel(
-                                        manutencoesItem.concluido!.toString(),
+                                        manutencoesItem.id.toString(),
                                         manutencoesIndex,
                                       ),
                                       updateCallback: () => safeSetState(() {}),
                                       child: SwitchButtonWidget(
                                         key: Key(
-                                          'Keywxn_${manutencoesItem.concluido!.toString()}',
+                                          'Keywxn_${manutencoesItem.id.toString()}',
                                         ),
+                                        isConcluido: manutencoesItem.concluido!,
+                                        idLembrete: manutencoesItem.id,
                                       ),
                                     ),
                                   ),
@@ -538,14 +494,13 @@ class _ManutencoesWidgetState extends State<ManutencoesWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 1.1),
+                    alignment: AlignmentDirectional(0, 1.1),
                     child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                       child: Icon(
                         Icons.energy_savings_leaf_rounded,
                         color: FlutterFlowTheme.of(context).alternate,
-                        size: 24.0,
+                        size: 24,
                       ),
                     ),
                   ),
