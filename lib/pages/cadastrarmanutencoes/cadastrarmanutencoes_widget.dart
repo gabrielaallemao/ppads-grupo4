@@ -1,12 +1,18 @@
+import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:ui';
 import '/index.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
 import 'cadastrarmanutencoes_model.dart';
 export 'cadastrarmanutencoes_model.dart';
 
@@ -67,13 +73,13 @@ class _CadastrarmanutencoesWidgetState
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
+            borderRadius: 30,
+            borderWidth: 1,
+            buttonSize: 60,
             icon: Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
-              size: 30.0,
+              size: 30,
             ),
             onPressed: () async {
               context.safePop();
@@ -82,17 +88,15 @@ class _CadastrarmanutencoesWidgetState
           title: Text(
             'Cadastrar manutenções',
             style: FlutterFlowTheme.of(context).titleMedium.override(
-                  fontFamily: FlutterFlowTheme.of(context).titleMediumFamily,
-                  fontSize: 24.0,
+                  font: FlutterFlowTheme.of(context).titleMedium,
+                  fontSize: 24,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w600,
-                  useGoogleFonts: GoogleFonts.asMap().containsKey(
-                      FlutterFlowTheme.of(context).titleMediumFamily),
                 ),
           ),
           actions: [],
           centerTitle: true,
-          elevation: 2.0,
+          elevation: 2,
         ),
         body: SafeArea(
           top: true,
@@ -102,12 +106,11 @@ class _CadastrarmanutencoesWidgetState
             children: [
               Form(
                 key: _model.formKey,
-                autovalidateMode: AutovalidateMode.disabled,
+                autovalidateMode: AutovalidateMode.always,
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: AlignmentDirectional(0, -1),
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                     child: SingleChildScrollView(
                       primary: false,
                       child: Column(
@@ -116,12 +119,12 @@ class _CadastrarmanutencoesWidgetState
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 30.0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                             child: FaIcon(
                               FontAwesomeIcons.tools,
                               color: FlutterFlowTheme.of(context).accent2,
-                              size: 48.0,
+                              size: 48,
                             ),
                           ),
                           Container(
@@ -137,87 +140,71 @@ class _CadastrarmanutencoesWidgetState
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .headlineMedium
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .headlineMediumFamily,
+                                      font: FlutterFlowTheme.of(context)
+                                          .headlineMedium,
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
-                                      fontSize: 22.0,
+                                      fontSize: 22,
                                       letterSpacing: 0.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .headlineMediumFamily),
                                     ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelMediumFamily,
+                                      font: FlutterFlowTheme.of(context)
+                                          .labelMedium,
                                       letterSpacing: 0.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMediumFamily),
                                     ),
                                 errorStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily,
+                                      font: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
                                       color: FlutterFlowTheme.of(context).error,
-                                      fontSize: 12.0,
+                                      fontSize: 12,
                                       letterSpacing: 0.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily),
                                     ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color:
                                         FlutterFlowTheme.of(context).alternate,
-                                    width: 2.0,
+                                    width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).primary,
-                                    width: 2.0,
+                                    width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).error,
-                                    width: 2.0,
+                                    width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).error,
-                                    width: 2.0,
+                                    width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 filled: true,
                                 fillColor: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                                 contentPadding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 20.0, 16.0, 20.0),
+                                    16, 20, 16, 20),
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .headlineMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .headlineMediumFamily,
-                                    fontSize: 22.0,
+                                    font: FlutterFlowTheme.of(context)
+                                        .headlineMedium,
+                                    fontSize: 22,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .headlineMediumFamily),
                                   ),
                               maxLines: 5,
                               minLines: 1,
@@ -225,6 +212,17 @@ class _CadastrarmanutencoesWidgetState
                               validator: _model
                                   .tipoManutencaoTextControllerValidator
                                   .asValidator(context),
+                              inputFormatters: [
+                                if (!isAndroid && !isiOS)
+                                  TextInputFormatter.withFunction(
+                                      (oldValue, newValue) {
+                                    return TextEditingValue(
+                                      selection: newValue.selection,
+                                      text: newValue.text.toCapitalization(
+                                          TextCapitalization.words),
+                                    );
+                                  }),
+                              ],
                             ),
                           ),
                           Container(
@@ -240,92 +238,87 @@ class _CadastrarmanutencoesWidgetState
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .headlineMedium
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .headlineMediumFamily,
+                                      font: FlutterFlowTheme.of(context)
+                                          .headlineMedium,
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
-                                      fontSize: 16.0,
+                                      fontSize: 16,
                                       letterSpacing: 0.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .headlineMediumFamily),
                                     ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelMediumFamily,
+                                      font: FlutterFlowTheme.of(context)
+                                          .labelMedium,
                                       letterSpacing: 0.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMediumFamily),
                                     ),
                                 errorStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily,
+                                      font: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
                                       color: FlutterFlowTheme.of(context).error,
-                                      fontSize: 12.0,
+                                      fontSize: 12,
                                       letterSpacing: 0.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily),
                                     ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color:
                                         FlutterFlowTheme.of(context).alternate,
-                                    width: 2.0,
+                                    width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).primary,
-                                    width: 2.0,
+                                    width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).error,
-                                    width: 2.0,
+                                    width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).error,
-                                    width: 2.0,
+                                    width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 filled: true,
                                 fillColor: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                                 contentPadding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 20.0, 16.0, 20.0),
+                                    16, 20, 16, 20),
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .headlineMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .headlineMediumFamily,
-                                    fontSize: 16.0,
+                                    font: FlutterFlowTheme.of(context)
+                                        .headlineMedium,
+                                    fontSize: 16,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .headlineMediumFamily),
                                   ),
                               cursorColor: FlutterFlowTheme.of(context).primary,
                               validator: _model
                                   .dispositivoTextControllerValidator
                                   .asValidator(context),
+                              inputFormatters: [
+                                if (!isAndroid && !isiOS)
+                                  TextInputFormatter.withFunction(
+                                      (oldValue, newValue) {
+                                    return TextEditingValue(
+                                      selection: newValue.selection,
+                                      text: newValue.text.toCapitalization(
+                                          TextCapitalization.words),
+                                    );
+                                  }),
+                              ],
                             ),
                           ),
                           Container(
@@ -341,104 +334,99 @@ class _CadastrarmanutencoesWidgetState
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .headlineMedium
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .headlineMediumFamily,
+                                      font: FlutterFlowTheme.of(context)
+                                          .headlineMedium,
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
-                                      fontSize: 16.0,
+                                      fontSize: 16,
                                       letterSpacing: 0.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .headlineMediumFamily),
                                     ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .labelMediumFamily,
+                                      font: FlutterFlowTheme.of(context)
+                                          .labelMedium,
                                       letterSpacing: 0.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMediumFamily),
                                     ),
                                 errorStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily,
+                                      font: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
                                       color: FlutterFlowTheme.of(context).error,
-                                      fontSize: 12.0,
+                                      fontSize: 12,
                                       letterSpacing: 0.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily),
                                     ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color:
                                         FlutterFlowTheme.of(context).alternate,
-                                    width: 2.0,
+                                    width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).primary,
-                                    width: 2.0,
+                                    width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).error,
-                                    width: 2.0,
+                                    width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).error,
-                                    width: 2.0,
+                                    width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 filled: true,
                                 fillColor: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                                 contentPadding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 20.0, 16.0, 20.0),
+                                    16, 20, 16, 20),
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .headlineMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .headlineMediumFamily,
-                                    fontSize: 16.0,
+                                    font: FlutterFlowTheme.of(context)
+                                        .headlineMedium,
+                                    fontSize: 16,
                                     letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .headlineMediumFamily),
                                   ),
                               cursorColor: FlutterFlowTheme.of(context).primary,
                               validator: _model
                                   .localManutencaoTextControllerValidator
                                   .asValidator(context),
+                              inputFormatters: [
+                                if (!isAndroid && !isiOS)
+                                  TextInputFormatter.withFunction(
+                                      (oldValue, newValue) {
+                                    return TextEditingValue(
+                                      selection: newValue.selection,
+                                      text: newValue.text.toCapitalization(
+                                          TextCapitalization.words),
+                                    );
+                                  }),
+                              ],
                             ),
                           ),
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.8,
-                            height: 50.0,
+                            height: 50,
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              borderRadius: BorderRadius.circular(12.0),
+                              borderRadius: BorderRadius.circular(12),
                               border: Border.all(
                                 color: FlutterFlowTheme.of(context).alternate,
-                                width: 2.0,
+                                width: 2,
                               ),
                             ),
                             child: Row(
@@ -446,10 +434,10 @@ class _CadastrarmanutencoesWidgetState
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1, 0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        15.0, 0.0, 50.0, 0.0),
+                                        15, 0, 50, 0),
                                     child: Text(
                                       valueOrDefault<String>(
                                         dateTimeFormat(
@@ -464,33 +452,28 @@ class _CadastrarmanutencoesWidgetState
                                       style: FlutterFlowTheme.of(context)
                                           .headlineMedium
                                           .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .headlineMediumFamily,
+                                            font: FlutterFlowTheme.of(context)
+                                                .headlineMedium,
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryText,
-                                            fontSize: 16.0,
+                                            fontSize: 16,
                                             letterSpacing: 0.0,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .headlineMediumFamily),
                                           ),
                                     ),
                                   ),
                                 ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 20.0, 0.0),
+                                      0, 0, 20, 0),
                                   child: FlutterFlowIconButton(
-                                    borderRadius: 100.0,
-                                    buttonSize: 36.0,
+                                    borderRadius: 100,
+                                    buttonSize: 36,
                                     fillColor:
                                         FlutterFlowTheme.of(context).primary,
                                     icon: Icon(
                                       Icons.add_rounded,
                                       color: FlutterFlowTheme.of(context).info,
-                                      size: 20.0,
+                                      size: 20,
                                     ),
                                     onPressed: () async {
                                       final _datePickedDate =
@@ -513,19 +496,13 @@ class _CadastrarmanutencoesWidgetState
                                                 FlutterFlowTheme.of(context)
                                                     .headlineLarge
                                                     .override(
-                                                      fontFamily: FlutterFlowTheme
-                                                              .of(context)
-                                                          .headlineLargeFamily,
-                                                      fontSize: 32.0,
+                                                      font: FlutterFlowTheme.of(
+                                                              context)
+                                                          .headlineLarge,
+                                                      fontSize: 32,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w600,
-                                                      useGoogleFonts: GoogleFonts
-                                                              .asMap()
-                                                          .containsKey(
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .headlineLargeFamily),
                                                     ),
                                             pickerBackgroundColor:
                                                 FlutterFlowTheme.of(context)
@@ -542,7 +519,7 @@ class _CadastrarmanutencoesWidgetState
                                             actionButtonForegroundColor:
                                                 FlutterFlowTheme.of(context)
                                                     .primaryText,
-                                            iconSize: 24.0,
+                                            iconSize: 24,
                                           );
                                         },
                                       );
@@ -567,20 +544,14 @@ class _CadastrarmanutencoesWidgetState
                                                   FlutterFlowTheme.of(context)
                                                       .headlineLarge
                                                       .override(
-                                                        fontFamily:
+                                                        font:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .headlineLargeFamily,
-                                                        fontSize: 32.0,
+                                                                .headlineLarge,
+                                                        fontSize: 32,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
-                                                        useGoogleFonts: GoogleFonts
-                                                                .asMap()
-                                                            .containsKey(
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .headlineLargeFamily),
                                                       ),
                                               pickerBackgroundColor:
                                                   FlutterFlowTheme.of(context)
@@ -597,7 +568,7 @@ class _CadastrarmanutencoesWidgetState
                                               actionButtonForegroundColor:
                                                   FlutterFlowTheme.of(context)
                                                       .primaryText,
-                                              iconSize: 24.0,
+                                              iconSize: 24,
                                             );
                                           },
                                         );
@@ -628,14 +599,14 @@ class _CadastrarmanutencoesWidgetState
                           ),
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.8,
-                            height: 50.0,
+                            height: 50,
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              borderRadius: BorderRadius.circular(12.0),
+                              borderRadius: BorderRadius.circular(12),
                               border: Border.all(
                                 color: FlutterFlowTheme.of(context).alternate,
-                                width: 2.0,
+                                width: 2,
                               ),
                             ),
                             child: Row(
@@ -643,49 +614,43 @@ class _CadastrarmanutencoesWidgetState
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1, 0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        15.0, 0.0, 50.0, 0.0),
+                                        15, 0, 50, 0),
                                     child: Text(
                                       'Concluído?',
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .headlineMedium
                                           .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .headlineMediumFamily,
+                                            font: FlutterFlowTheme.of(context)
+                                                .headlineMedium,
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryText,
-                                            fontSize: 16.0,
+                                            fontSize: 16,
                                             letterSpacing: 0.0,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .headlineMediumFamily),
                                           ),
                                     ),
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(1.0, 0.0),
+                                  alignment: AlignmentDirectional(1, 0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 15.0, 0.0),
+                                        0, 0, 15, 0),
                                     child: Switch.adaptive(
                                       value: _model.switchValue!,
                                       onChanged: (newValue) async {
                                         safeSetState(() =>
-                                            _model.switchValue = newValue);
+                                            _model.switchValue = newValue!);
                                       },
                                       activeColor:
                                           FlutterFlowTheme.of(context).tertiary,
                                       activeTrackColor:
                                           FlutterFlowTheme.of(context).tertiary,
                                       inactiveTrackColor:
-                                          FlutterFlowTheme.of(context)
-                                              .alternate,
+                                          FlutterFlowTheme.of(context).accent3,
                                       inactiveThumbColor:
                                           FlutterFlowTheme.of(context)
                                               .secondaryBackground,
@@ -696,8 +661,8 @@ class _CadastrarmanutencoesWidgetState
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 16.0, 0.0, 16.0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 16, 0, 16),
                             child: FFButtonWidget(
                               onPressed: () async {
                                 _model.boolConcluido =
@@ -711,6 +676,7 @@ class _CadastrarmanutencoesWidgetState
                                   'local':
                                       _model.localManutencaoTextController.text,
                                   'concluido': _model.switchValue,
+                                  'user_id': currentUserUid,
                                 });
                                 await showDialog(
                                   context: context,
@@ -735,51 +701,47 @@ class _CadastrarmanutencoesWidgetState
                               text: 'Confirmar',
                               options: FFButtonOptions(
                                 width: MediaQuery.sizeOf(context).width * 0.5,
-                                height: 44.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
+                                height: 44,
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                iconPadding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .titleSmallFamily,
+                                      font: FlutterFlowTheme.of(context)
+                                          .titleSmall,
                                       color: Colors.white,
                                       letterSpacing: 0.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmallFamily),
                                     ),
-                                elevation: 3.0,
+                                elevation: 3,
                                 borderSide: BorderSide(
                                   color: Colors.transparent,
-                                  width: 1.0,
+                                  width: 1,
                                 ),
-                                borderRadius: BorderRadius.circular(12.0),
+                                borderRadius: BorderRadius.circular(12),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 10.0, 0.0, 0.0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                             child: Icon(
                               Icons.energy_savings_leaf_rounded,
                               color: FlutterFlowTheme.of(context).alternate,
-                              size: 24.0,
+                              size: 24,
                             ),
                           ),
                         ]
-                            .divide(SizedBox(height: 12.0))
-                            .around(SizedBox(height: 12.0)),
+                            .divide(SizedBox(height: 12))
+                            .around(SizedBox(height: 12)),
                       ),
                     ),
                   ),
                 ),
               ),
-            ].divide(SizedBox(height: 24.0)),
+            ].divide(SizedBox(height: 24)),
           ),
         ),
       ),
